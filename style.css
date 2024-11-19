@@ -16,11 +16,17 @@ html, body {
 }
 
 /* Gradient background */
-#page, #page1, #page2, #page3 {
+#page, #page1, #page2, #page3, #page4 {
     position: relative;
     height: 100vh;
     width: 100vw;
     background: linear-gradient(135deg, #FFD700, #FFFACD, #000000); /* Yellow, Cream, Black gradient */
+
+}
+
+#page1 , #page3
+{
+    z-index: 19;
 }
 
 /* Ensuring canvas stays on top */
@@ -340,4 +346,50 @@ footer {
 
 .footer-info p {
     color: #FFFACD; /* Creamy text for footer info */
+}
+
+#page4>#text4 {
+    position: absolute;
+    top: 30%; /* Aligns with a visually appealing position */
+    left: 10%; /* Adds uniform padding from the left */
+    z-index: 20; /* Keeps it on top of background */
+}
+
+#page4>#text4>h3 {
+    font-family: gilroy;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFACD; /* Creamy text for subheading */
+    margin-bottom: 10px;
+}
+
+#page4>#text4>h1 {
+    font-family: gilroy;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #FFD700; /* Yellow for the main header text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Subtle shadow for contrast */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #page4>#text4>h1 {
+        font-size: 45px; /* Reduce size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #page4>#text4 {
+        top: 20%; /* Adjust position for smaller screens */
+        left: 5%; /* Add padding for small devices */
+    }
+
+    #page4>#text4>h1 {
+        font-size: 30px; /* Further reduce for mobile screens */
+    }
+
+    #page4>#text4>h3 {
+        font-size: 16px; /* Smaller subheading text */
+    }
 }
